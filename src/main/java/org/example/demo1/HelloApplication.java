@@ -10,8 +10,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import org.example.demo1.views.ClientAddView;
-import org.example.demo1.views.ClientListView;
+import org.example.demo1.views.*;
 
 public class HelloApplication extends Application {
     private BorderPane root;
@@ -49,7 +48,7 @@ public class HelloApplication extends Application {
 
         getItem = new MenuItem("Afficher Activitées");
         getItem.setOnAction(event -> {
-            primaryStage.close();
+            showActiviteList();
         });
 
         activiteMenu.getItems().addAll(addItem, getItem);
@@ -63,7 +62,7 @@ public class HelloApplication extends Application {
 
         getItem = new MenuItem("Afficher Compannies");
         getItem.setOnAction(event -> {
-            primaryStage.close();
+            showCompannieAerienneList();
         });
 
         compannieMenu.getItems().addAll(addItem, getItem);
@@ -175,7 +174,7 @@ public class HelloApplication extends Application {
 
         getItem = new MenuItem("Afficher Avis");
         getItem.setOnAction(event -> {
-            primaryStage.close();
+            showAvisList();
         });
 
         avisMenu.getItems().addAll(addItem, getItem);
@@ -210,6 +209,33 @@ public class HelloApplication extends Application {
 
         // Remplacer uniquement le "center" du BorderPane sans changer la scène entière
         root.setCenter(clientListPane);
+    }
+    private void showActiviteList() {
+        ActiviteListView activiteListView = new ActiviteListView();
+
+        // Créer la vue de la liste des clients
+        BorderPane activiteListPane = activiteListView.createActiviteListView(primaryStage);
+
+        // Remplacer uniquement le "center" du BorderPane sans changer la scène entière
+        root.setCenter(activiteListPane);
+    }
+    private void showAvisList() {
+         AvisListView avisListView = new AvisListView();
+
+        // Créer la vue de la liste des clients
+        BorderPane avisListPane = avisListView.createAvisListView(primaryStage);
+
+        // Remplacer uniquement le "center" du BorderPane sans changer la scène entière
+        root.setCenter(avisListPane);
+    }
+    private void showCompannieAerienneList() {
+        CompannieAerienneListView compannieAerienneListView = new CompannieAerienneListView();
+
+        // Créer la vue de la liste des clients
+        BorderPane compannieAerienneListPane = compannieAerienneListView.createCompannieAerienneListView(primaryStage);
+
+        // Remplacer uniquement le "center" du BorderPane sans changer la scène entière
+        root.setCenter(compannieAerienneListPane);
     }
     private void showClientAdd() {
         ClientAddView clientAddView = new ClientAddView();

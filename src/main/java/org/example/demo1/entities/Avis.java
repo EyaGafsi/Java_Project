@@ -1,6 +1,9 @@
 package org.example.demo1.entities;
 
 import jakarta.persistence.*;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -16,7 +19,7 @@ public class Avis {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-incrémentation
     private long id_Avis;
-    private float note;
+    private double note;
     private String commentaire ;
     private LocalDate date_avis;
     @ManyToMany
@@ -28,4 +31,21 @@ public class Avis {
     @ManyToMany
     @JoinColumn(name = "id_hotel") // Clé étrangère vers Reservation
     private List<Hotel> hotels;
+
+
+    public SimpleLongProperty idAvisProperty() {
+        return new SimpleLongProperty(id_Avis);
+    }
+    public SimpleStringProperty commentaireProperty() {
+        return new SimpleStringProperty(commentaire);
+    }
+
+    public SimpleDoubleProperty noteProperty() {
+        return new SimpleDoubleProperty(note);
+    }
+
+    public SimpleStringProperty dateProperty() {
+        return new SimpleStringProperty(date_avis.toString());
+    }
+
 }

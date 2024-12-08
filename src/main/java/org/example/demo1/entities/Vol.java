@@ -1,6 +1,8 @@
 package org.example.demo1.entities;
 
 import jakarta.persistence.*;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -28,4 +30,6 @@ public class Vol {
     @ManyToOne
     @JoinColumn(name = "id_voyage", nullable = false)
     private Voyage voyage;
+
+
 }

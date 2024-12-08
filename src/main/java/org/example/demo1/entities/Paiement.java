@@ -1,6 +1,8 @@
 package org.example.demo1.entities;
 
 import jakarta.persistence.*;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
 import lombok.*;
 import org.example.demo1.enums.ModePaiement;
 
@@ -25,4 +27,7 @@ public class Paiement {
    @ManyToMany
    @JoinColumn(name = "id_reservation") // Clé étrangère vers Reservation
    private List<Reservation> reservation;
+
+
+
 }

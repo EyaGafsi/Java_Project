@@ -1,6 +1,8 @@
 package org.example.demo1.entities;
 
 import jakarta.persistence.*;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,4 +29,6 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "id_voyage", nullable = false)
     private Voyage voyage;
+
+
 }

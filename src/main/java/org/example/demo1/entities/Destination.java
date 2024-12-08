@@ -1,6 +1,8 @@
 package org.example.demo1.entities;
 
 import jakarta.persistence.*;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
 import lombok.*;
 
 @Entity
@@ -17,5 +19,19 @@ public class Destination {
     private String pays;
     private String ville;
     private String description;
+    public SimpleLongProperty idDestinationProperty() {
+        return new SimpleLongProperty(id_destination);
+    }
+    public SimpleStringProperty paysProperty() {
+        return new SimpleStringProperty(pays);
+    }
+
+    public SimpleStringProperty villeProperty() {
+        return new SimpleStringProperty(ville);
+    }
+
+    public SimpleStringProperty descriptionProperty() {
+        return new SimpleStringProperty(description);
+    }
 
 }
