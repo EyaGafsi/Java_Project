@@ -43,7 +43,6 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Activitée");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Activitées");
@@ -57,7 +56,6 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Compannie");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Compannies");
@@ -71,12 +69,10 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Destination");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Destinations");
         getItem.setOnAction(event -> {
-            primaryStage.close();
         });
 
         destinationMenu.getItems().addAll(addItem, getItem);
@@ -85,12 +81,10 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Groupe");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Groupes");
         getItem.setOnAction(event -> {
-            primaryStage.close();
         });
 
         groupeMenu.getItems().addAll(addItem, getItem);
@@ -98,12 +92,10 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Hotel");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Hotels");
         getItem.setOnAction(event -> {
-            primaryStage.close();
         });
 
         hotelMenu.getItems().addAll(addItem, getItem);
@@ -112,12 +104,10 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Transport");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Transports");
         getItem.setOnAction(event -> {
-            primaryStage.close();
         });
 
         transportMenu.getItems().addAll(addItem, getItem);
@@ -126,12 +116,10 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Reservation");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Reservations");
         getItem.setOnAction(event -> {
-            primaryStage.close();
         });
 
         ReservationMenu.getItems().addAll(addItem, getItem);
@@ -140,12 +128,10 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Vol");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Vols");
         getItem.setOnAction(event -> {
-            primaryStage.close();
         });
 
         volMenu.getItems().addAll(addItem, getItem);
@@ -154,12 +140,10 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Voyage");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Voyages");
         getItem.setOnAction(event -> {
-            primaryStage.close();
         });
 
         voyageMenu.getItems().addAll(addItem, getItem);
@@ -169,7 +153,6 @@ public class HelloApplication extends Application {
 
         addItem = new MenuItem("Ajouter Avis");
         addItem.setOnAction(event -> {
-            showAlert("New File", "Create a new file.");
         });
 
         getItem = new MenuItem("Afficher Avis");
@@ -189,7 +172,7 @@ public class HelloApplication extends Application {
         // Scene setup
         Scene scene = new Scene(root, 800, 600);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("JavaFX Menu Example");
+        primaryStage.setTitle("Agence de voyage");
         primaryStage.show();
     }
 
